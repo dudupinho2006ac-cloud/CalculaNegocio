@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Execute npm run sitemap com o domínio HTTPS definitivo antes de publicar. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/calculadoras/lucro</loc></url>
+  <url><loc>/calculadoras/preco-de-venda</loc></url>
+  <url><loc>/calculadoras/margem-de-lucro</loc></url>
+  <url><loc>/calculadoras/porcentagem</loc></url>
+  <url><loc>/calculadoras/desconto</loc></url>
+  <url><loc>/calculadoras/juros-compostos</loc></url>
+  <url><loc>/calculadoras/rendimento-investimentos</loc></url>
+  <url><loc>/calculadoras/financiamento</loc></url>
+  <url><loc>/sobre</loc></url>
+  <url><loc>/contato</loc></url>
+  <url><loc>/privacidade</loc></url>
+  <url><loc>/termos</loc></url>
+</urlset>

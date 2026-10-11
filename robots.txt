@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Adicione a URL absoluta do sitemap depois de definir o domínio público.

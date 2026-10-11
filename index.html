@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <title>CalculaNegócio — Calculadoras gratuitas para empreendedores</title>
+  <meta name="description" content="Calcule lucro, preço de venda, margem, porcentagem, juros, investimentos, financiamento e desconto gratuitamente.">
+  <link rel="canonical" href="/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="module" src="/assets/js/app.mjs"></script>
+</head>
+<body class="home">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="CalculaNegócio — início"><span class="brand-mark" aria-hidden="true">=</span><span>Calcula<strong>Negócio</strong></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+      <nav class="site-nav" id="menu-principal" aria-label="Principal"><ul><li><a aria-current="page" href="/">Calculadoras</a></li><li><a href="/sobre">Sobre</a></li><li><a href="/contato">Contato</a></li></ul></nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="home-intro">
+      <div class="container intro-layout">
+        <div><p class="section-label">Ferramentas de cálculo</p><h1>Calculadoras online gratuitas</h1></div>
+        <p>Contas úteis para vendas, preços e finanças pessoais. Você informa os valores e recebe o resultado com a fórmula utilizada.</p>
+      </div>
+    </section>
+
+    <section class="tool-directory" id="calculadoras" aria-labelledby="diretorio-titulo">
+      <div class="container directory-layout">
+        <aside class="directory-sidebar">
+          <h2 id="diretorio-titulo">Encontre uma calculadora</h2>
+          <label for="busca-calculadoras">Buscar por nome ou finalidade</label>
+          <div class="search-field"><input type="search" id="busca-calculadoras" placeholder="Ex.: preço, juros ou desconto" autocomplete="off"><span aria-hidden="true">⌕</span></div>
+          <p class="search-help">Digite para filtrar as ferramentas desta página.</p>
+          <nav class="topic-nav" aria-label="Assuntos"><a href="#negocios">Negócios</a><a href="#financas">Finanças pessoais</a><a href="#calculos">Cálculos rápidos</a></nav>
+        </aside>
+
+        <div class="directory-content">
+          <p class="search-status" id="status-busca" aria-live="polite"></p>
+          <section class="tool-group" id="negocios" data-tool-group>
+            <header><p>Para vender e precificar</p><h2>Negócios</h2></header>
+            <div class="tool-list">
+              <article class="tool-entry" data-tool="preço venda custo despesas taxas margem produto"><div><h3><a href="/calculadoras/preco-de-venda">Preço de venda</a></h3><p>Forma um preço considerando custos, despesas, taxas e margem desejada.</p></div><a class="entry-action" href="/calculadoras/preco-de-venda" aria-label="Abrir calculadora de preço de venda">Abrir <span aria-hidden="true">→</span></a></article>
+              <article class="tool-entry" data-tool="lucro prejuízo venda ganho markup custo"><div><h3><a href="/calculadoras/lucro">Lucro</a></h3><p>Mostra lucro ou prejuízo, margem sobre a venda e markup sobre o custo.</p></div><a class="entry-action" href="/calculadoras/lucro" aria-label="Abrir calculadora de lucro">Abrir <span aria-hidden="true">→</span></a></article>
+              <article class="tool-entry" data-tool="margem lucro markup receita custo rentabilidade"><div><h3><a href="/calculadoras/margem-de-lucro">Margem de lucro</a></h3><p>Compara margem sobre a receita com markup sobre o custo.</p></div><a class="entry-action" href="/calculadoras/margem-de-lucro" aria-label="Abrir calculadora de margem">Abrir <span aria-hidden="true">→</span></a></article>
+              <article class="tool-entry" data-tool="desconto promoção preço final economia oferta"><div><h3><a href="/calculadoras/desconto">Desconto</a></h3><p>Calcula a economia em reais e o preço final de uma oferta.</p></div><a class="entry-action" href="/calculadoras/desconto" aria-label="Abrir calculadora de desconto">Abrir <span aria-hidden="true">→</span></a></article>
+            </div>
+          </section>
+
+          <section class="tool-group" id="financas" data-tool-group>
+            <header><p>Para planejar ao longo do tempo</p><h2>Finanças pessoais</h2></header>
+            <div class="tool-list">
+              <article class="tool-entry" data-tool="juros compostos capital aporte montante taxa investimento"><div><h3><a href="/calculadoras/juros-compostos">Juros compostos</a></h3><p>Projeta capital, aportes e juros, com evolução detalhada mês a mês.</p></div><a class="entry-action" href="/calculadoras/juros-compostos" aria-label="Abrir calculadora de juros compostos">Abrir <span aria-hidden="true">→</span></a></article>
+              <article class="tool-entry" data-tool="rendimento investimentos rentabilidade patrimônio cenários aporte"><div><h3><a href="/calculadoras/rendimento-investimentos">Rendimento de investimentos</a></h3><p>Compara três cenários de rentabilidade informados por você.</p></div><a class="entry-action" href="/calculadoras/rendimento-investimentos" aria-label="Abrir simulador de investimentos">Abrir <span aria-hidden="true">→</span></a></article>
+              <article class="tool-entry" data-tool="financiamento price prestação parcelas amortização juros crédito"><div><h3><a href="/calculadoras/financiamento">Financiamento</a></h3><p>Simula prestação, juros e amortização pelo Sistema Price.</p></div><a class="entry-action" href="/calculadoras/financiamento" aria-label="Abrir calculadora de financiamento">Abrir <span aria-hidden="true">→</span></a></article>
+            </div>
+          </section>
+
+          <section class="tool-group" id="calculos" data-tool-group>
+            <header><p>Para resolver uma conta direta</p><h2>Cálculos rápidos</h2></header>
+            <div class="tool-list">
+              <article class="tool-entry" data-tool="porcentagem percentual variação proporção aumento redução"><div><h3><a href="/calculadoras/porcentagem">Porcentagem</a></h3><p>Resolve percentual de um valor, variação entre números e proporção.</p></div><a class="entry-action" href="/calculadoras/porcentagem" aria-label="Abrir calculadora de porcentagem">Abrir <span aria-hidden="true">→</span></a></article>
+            </div>
+          </section>
+          <p class="no-results" id="sem-resultados" hidden>Nenhuma calculadora encontrada. Tente buscar por outro termo.</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="site-note"><div class="container"><strong>Antes de decidir:</strong><p>As ferramentas ajudam a conferir contas, mas não substituem orientação contábil, financeira ou tributária. Revise as premissas de cada cálculo.</p><a href="/sobre">Como o site funciona</a></div></aside>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">=</span><span>Calcula<strong>Negócio</strong></span></a><p>Calculadoras gratuitas com fórmulas explicadas.</p></div><div><h2>Ferramentas</h2><ul><li><a href="/#negocios">Negócios</a></li><li><a href="/#financas">Finanças pessoais</a></li><li><a href="/#calculos">Cálculos rápidos</a></li></ul></div><div><h2>Informações</h2><ul><li><a href="/sobre">Sobre</a></li><li><a href="/contato">Contato</a></li><li><a href="/privacidade">Privacidade</a></li><li><a href="/termos">Termos de uso</a></li></ul></div></div><div class="container footer-bottom">© <span id="ano"></span> CalculaNegócio. Conteúdo informativo.</div></footer>
+</body></html>

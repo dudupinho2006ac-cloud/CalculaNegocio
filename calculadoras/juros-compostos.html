@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<title>Calculadora de Juros Compostos com Aportes | CalculaNegócio</title>
+<meta name="description" content="Calcule juros compostos com capital inicial, aportes mensais, taxa efetiva mensal ou anual e acompanhe a evolução mês a mês.">
+<link rel="canonical" href="/calculadoras/juros-compostos">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="module" src="/assets/js/app.mjs">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+<nav class="site-nav" id="menu-principal" aria-label="Principal">
+<ul>
+<li>
+<a href="/">Início</a>
+</li>
+<li>
+<a href="/#calculadoras">Calculadoras</a>
+</li>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/contato">Contato</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<header class="page-header">
+<div class="container">
+<nav class="breadcrumb" aria-label="Navegação estrutural">
+<a href="/">Início</a> / Juros compostos</nav>
+<p class="eyebrow">Crescimento acumulado</p>
+<h1>Calculadora de juros compostos</h1>
+<p class="lead">Simule a evolução de um capital com aportes no fim de cada mês e conversão equivalente entre taxas efetivas anuais e mensais.</p>
+</div>
+</header>
+<section class="section">
+<div class="container calculator-layout">
+<div class="calculator-panel calculator-panel-wide">
+<h2>Dados da simulação</h2>
+<form data-calculator="juros-compostos" novalidate>
+<div class="field-grid">
+<div class="field">
+<label for="capital">Capital inicial (R$) *</label>
+<input id="capital" name="capital" data-number inputmode="decimal" placeholder="Ex.: 10.000,00">
+</div>
+<div class="field">
+<label for="aporte">Aporte mensal (R$)</label>
+<input id="aporte" name="aporte" data-number inputmode="decimal" value="0">
+<small class="hint">Opcional. O aporte entra no fim do mês.</small>
+</div>
+<div class="field">
+<label for="taxa">Taxa efetiva (%) *</label>
+<input id="taxa" name="taxa" data-number inputmode="decimal" placeholder="Ex.: 1">
+</div>
+<div class="field">
+<label for="unidadeTaxa">Periodicidade da taxa</label>
+<select id="unidadeTaxa" name="unidadeTaxa">
+<option value="mensal">Mensal</option>
+<option value="anual">Anual</option>
+</select>
+</div>
+<div class="field">
+<label for="periodo">Prazo (quantidade) *</label>
+<input id="periodo" name="periodo" data-number inputmode="decimal" placeholder="Ex.: 24">
+</div>
+<div class="field">
+<label for="unidadePeriodo">Prazo informado em</label>
+<select id="unidadePeriodo" name="unidadePeriodo">
+<option value="meses">Meses</option>
+<option value="anos">Anos</option>
+</select>
+</div>
+</div>
+<p class="form-error" tabindex="-1" role="alert">
+</p>
+<div class="actions">
+<button class="button button-primary" type="submit">Simular juros</button>
+<button class="button button-secondary" type="reset">Limpar</button>
+</div>
+</form>
+<section class="result" id="resultado" tabindex="-1" aria-live="polite" hidden>
+</section>
+</div>
+<aside class="sidebar">
+<h2>Taxas equivalentes</h2>
+<p>Uma taxa anual efetiva é convertida por <strong>(1 + taxa anual)<sup>1/12</sup> − 1</strong>. Dividir por 12 não produz a taxa mensal equivalente.</p>
+<h2>Veja cenários</h2>
+<p>Para comparar três rentabilidades, use o <a href="/calculadoras/rendimento-investimentos">simulador de investimentos</a>.</p>
+</aside>
+</div>
+</section>
+<article class="section section-white">
+<div class="container content">
+<h2>Como usar a calculadora</h2>
+<ol class="steps">
+<li>Informe o valor já disponível e, se houver, o aporte mensal.</li>
+<li>Escolha se a taxa informada é efetiva mensal ou anual.</li>
+<li>Defina o prazo em meses ou anos. Anos fracionados precisam corresponder a meses inteiros.</li>
+<li>Confira montante, valor investido, juros e a evolução de cada mês.</li>
+</ol>
+<h2>Fórmula com aportes no fim do mês</h2>
+<p>Sem aportes, o montante é <strong>M = C × (1 + i)<sup>n</sup>
+</strong>. Com aportes constantes no fim de cada mês, soma-se <strong>A × [((1 + i)<sup>n</sup> − 1) ÷ i]</strong>. A tabela usa a recorrência mensal, que também funciona quando a taxa é zero.</p>
+<h2>Exemplo verificado</h2>
+<p>R$ 1.000,00 aplicados por 2 meses a 1% ao mês, com aporte de R$ 100,00 no fim de cada mês, resultam em R$ 1.221,10. Foram investidos R$ 1.200,00 e os juros acumulados são R$ 21,10.</p>
+<section class="faq" aria-labelledby="faq-titulo">
+<h2 id="faq-titulo">Dúvidas sobre juros compostos</h2>
+<details>
+<summary>O aporte rende no mesmo mês?</summary>
+<p>Não nesta calculadora. O aporte é feito no fim do mês e começa a render no mês seguinte.</p>
+</details>
+<details>
+<summary>Taxa anual dividida por 12 é equivalente?</summary>
+<p>Não. Para taxas efetivas, a equivalência considera capitalização: a taxa mensal elevada a 12 deve reproduzir a taxa anual.</p>
+</details>
+<details>
+<summary>A calculadora aceita taxa negativa?</summary>
+<p>Sim, desde que seja maior que −100%. Isso permite estudar desvalorização, mas não representa promessa ou previsão.</p>
+</details>
+</section>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<p>Ferramentas gratuitas para decisões mais claras.</p>
+</div>
+<div>
+<h2>Relacionadas</h2>
+<ul>
+<li>
+<a href="/calculadoras/rendimento-investimentos">Rendimento</a>
+</li>
+<li>
+<a href="/calculadoras/financiamento">Financiamento</a>
+</li>
+<li>
+<a href="/calculadoras/porcentagem">Porcentagem</a>
+</li>
+</ul>
+</div>
+<div>
+<h2>Informações</h2>
+<ul>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/privacidade">Privacidade</a>
+</li>
+<li>
+<a href="/termos">Termos</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="ano">
+</span> CalculaNegócio.</div>
+</div>
+</footer>
+</body>
+</html>

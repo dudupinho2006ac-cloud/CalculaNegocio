@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<title>Simulador de Rendimento de Investimentos | CalculaNegócio</title>
+<meta name="description" content="Compare três cenários de rentabilidade informados por você e simule patrimônio, aportes e rendimento bruto ao longo do prazo.">
+<link rel="canonical" href="/calculadoras/rendimento-investimentos">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="module" src="/assets/js/app.mjs">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+<nav class="site-nav" id="menu-principal" aria-label="Principal">
+<ul>
+<li>
+<a href="/">Início</a>
+</li>
+<li>
+<a href="/#calculadoras">Calculadoras</a>
+</li>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/contato">Contato</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<header class="page-header">
+<div class="container">
+<nav class="breadcrumb" aria-label="Navegação estrutural">
+<a href="/">Início</a> / Rendimento de investimentos</nav>
+<p class="eyebrow">Comparação de hipóteses</p>
+<h1>Simulador de rendimento de investimentos</h1>
+<p class="lead">Compare três taxas escolhidas por você. Os resultados são simulações matemáticas, não previsões nem recomendações de investimento.</p>
+</div>
+</header>
+<section class="section">
+<div class="container calculator-layout">
+<div class="calculator-panel calculator-panel-wide">
+<h2>Valores e cenários</h2>
+<form data-calculator="investimento" novalidate>
+<div class="field-grid">
+<div class="field">
+<label for="inicial">Valor inicial (R$) *</label>
+<input id="inicial" name="inicial" data-number inputmode="decimal" placeholder="Ex.: 5.000,00">
+</div>
+<div class="field">
+<label for="aporte">Aporte mensal (R$)</label>
+<input id="aporte" name="aporte" data-number inputmode="decimal" value="0">
+<small class="hint">Considerado no fim de cada mês.</small>
+</div>
+<div class="field">
+<label for="taxa1">Rentabilidade do cenário 1 (%) *</label>
+<input id="taxa1" name="taxa1" data-number inputmode="decimal" placeholder="Ex.: 6">
+</div>
+<div class="field">
+<label for="taxa2">Rentabilidade do cenário 2 (%) *</label>
+<input id="taxa2" name="taxa2" data-number inputmode="decimal" placeholder="Ex.: 10">
+</div>
+<div class="field">
+<label for="taxa3">Rentabilidade do cenário 3 (%) *</label>
+<input id="taxa3" name="taxa3" data-number inputmode="decimal" placeholder="Ex.: 14">
+</div>
+<div class="field">
+<label for="unidadeTaxa">Periodicidade das taxas</label>
+<select id="unidadeTaxa" name="unidadeTaxa">
+<option value="anual">Anual efetiva</option>
+<option value="mensal">Mensal efetiva</option>
+</select>
+</div>
+<div class="field">
+<label for="periodo">Prazo (quantidade) *</label>
+<input id="periodo" name="periodo" data-number inputmode="decimal" placeholder="Ex.: 5">
+</div>
+<div class="field">
+<label for="unidadePeriodo">Prazo informado em</label>
+<select id="unidadePeriodo" name="unidadePeriodo">
+<option value="anos">Anos</option>
+<option value="meses">Meses</option>
+</select>
+</div>
+</div>
+<p class="form-error" tabindex="-1" role="alert">
+</p>
+<div class="actions">
+<button class="button button-primary" type="submit">Comparar cenários</button>
+<button class="button button-secondary" type="reset">Limpar</button>
+</div>
+</form>
+<section class="result" id="resultado" tabindex="-1" aria-live="polite" hidden>
+</section>
+</div>
+<aside class="sidebar">
+<h2>Você informa as taxas</h2>
+<p>A ferramenta não busca nem sugere taxas do mercado. Use hipóteses adequadas à análise que deseja fazer.</p>
+<h2>Entenda a capitalização</h2>
+<p>Para acompanhar um único cenário mês a mês, use <a href="/calculadoras/juros-compostos">juros compostos</a>.</p>
+</aside>
+</div>
+</section>
+<article class="section section-white">
+<div class="container content">
+<h2>Como comparar os cenários</h2>
+<ol class="steps">
+<li>Informe o valor inicial e o aporte que pretende fazer no fim de cada mês.</li>
+<li>Preencha três hipóteses de rentabilidade na mesma unidade: mensal ou anual efetiva.</li>
+<li>Defina o prazo e compare patrimônio e rendimento bruto, mantendo os aportes iguais.</li>
+<li>Use o resultado como exercício de sensibilidade, não como estimativa garantida.</li>
+</ol>
+<h2>Como o patrimônio é simulado?</h2>
+<p>Em cada mês, o saldo anterior recebe a rentabilidade equivalente mensal e depois o aporte é adicionado. O total aportado é a soma do valor inicial com todos os aportes; o rendimento bruto é a diferença entre patrimônio final e total aportado. Impostos, taxas, inflação e oscilações não são descontados.</p>
+<h2>Exemplo verificado</h2>
+<p>Com R$ 1.000,00 iniciais, sem novos aportes e prazo de um ano, um cenário de 10% ao ano resulta em R$ 1.100,00. A taxa mensal equivalente é aproximadamente 0,7974%, e não 10% ÷ 12.</p>
+<p class="notice">Rentabilidade passada ou hipotética não garante retorno futuro. Esta página não avalia risco, liquidez, tributação ou adequação de produtos financeiros.</p>
+<section class="faq" aria-labelledby="faq-titulo">
+<h2 id="faq-titulo">Dúvidas sobre a simulação</h2>
+<details>
+<summary>Os cenários representam investimentos específicos?</summary>
+<p>Não. Eles representam somente as taxas digitadas pelo usuário e não correspondem automaticamente a nenhum produto.</p>
+</details>
+<details>
+<summary>O resultado já desconta imposto e inflação?</summary>
+<p>Não. O rendimento mostrado é bruto e nominal. Custos, impostos e perda de poder de compra precisam ser analisados separadamente.</p>
+</details>
+<details>
+<summary>Por que comparar três taxas?</summary>
+<p>A comparação mostra como pequenas diferenças de rentabilidade podem se acumular ao longo do tempo, mantendo capital, aportes e prazo constantes.</p>
+</details>
+</section>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<p>Simulações educativas, sem promessas de retorno.</p>
+</div>
+<div>
+<h2>Relacionadas</h2>
+<ul>
+<li>
+<a href="/calculadoras/juros-compostos">Juros compostos</a>
+</li>
+<li>
+<a href="/calculadoras/financiamento">Financiamento</a>
+</li>
+<li>
+<a href="/calculadoras/porcentagem">Porcentagem</a>
+</li>
+</ul>
+</div>
+<div>
+<h2>Informações</h2>
+<ul>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/privacidade">Privacidade</a>
+</li>
+<li>
+<a href="/termos">Termos</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="ano">
+</span> CalculaNegócio.</div>
+</div>
+</footer>
+</body>
+</html>

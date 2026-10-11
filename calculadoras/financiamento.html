@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<title>Calculadora de Financiamento Price | CalculaNegócio</title>
+<meta name="description" content="Simule financiamento pelo Sistema Price, prestação, total pago, juros e tabela de amortização com taxa mensal ou anual efetiva.">
+<link rel="canonical" href="/calculadoras/financiamento">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="module" src="/assets/js/app.mjs">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+<nav class="site-nav" id="menu-principal" aria-label="Principal">
+<ul>
+<li>
+<a href="/">Início</a>
+</li>
+<li>
+<a href="/#calculadoras">Calculadoras</a>
+</li>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/contato">Contato</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<header class="page-header">
+<div class="container">
+<nav class="breadcrumb" aria-label="Navegação estrutural">
+<a href="/">Início</a> / Financiamento</nav>
+<p class="eyebrow">Parcelas fixas</p>
+<h1>Calculadora de financiamento Price</h1>
+<p class="lead">Estime a prestação fixa, o total pago e os juros, com tabela que separa juros e amortização em cada parcela.</p>
+</div>
+</header>
+<section class="section">
+<div class="container calculator-layout">
+<div class="calculator-panel calculator-panel-wide">
+<h2>Dados do financiamento</h2>
+<form data-calculator="financiamento" novalidate>
+<div class="field-grid">
+<div class="field">
+<label for="valor">Valor financiado (R$) *</label>
+<input id="valor" name="valor" data-number inputmode="decimal" placeholder="Ex.: 50.000,00">
+</div>
+<div class="field">
+<label for="taxa">Taxa de juros (%) *</label>
+<input id="taxa" name="taxa" data-number inputmode="decimal" placeholder="Ex.: 1,5">
+</div>
+<div class="field">
+<label for="unidadeTaxa">Periodicidade da taxa</label>
+<select id="unidadeTaxa" name="unidadeTaxa">
+<option value="mensal">Mensal</option>
+<option value="anual">Anual efetiva</option>
+</select>
+</div>
+<div class="field">
+<label for="parcelas">Prazo (número de parcelas) *</label>
+<input id="parcelas" name="parcelas" data-number inputmode="numeric" placeholder="Ex.: 36">
+</div>
+</div>
+<p class="form-error" tabindex="-1" role="alert">
+</p>
+<div class="actions">
+<button class="button button-primary" type="submit">Simular financiamento</button>
+<button class="button button-secondary" type="reset">Limpar</button>
+</div>
+</form>
+<section class="result" id="resultado" tabindex="-1" aria-live="polite" hidden>
+</section>
+</div>
+<aside class="sidebar">
+<h2>O que não está incluído</h2>
+<p>Tarifas, seguros, impostos e outros componentes do Custo Efetivo Total (CET) não entram nesta conta.</p>
+<h2>Compare o efeito do tempo</h2>
+<p>A <a href="/calculadoras/juros-compostos">calculadora de juros compostos</a> ajuda a visualizar a capitalização fora de um contrato Price.</p>
+</aside>
+</div>
+</section>
+<article class="section section-white">
+<div class="container content">
+<h2>Como usar o simulador</h2>
+<ol class="steps">
+<li>Informe somente o principal financiado, sem entrada já paga.</li>
+<li>Digite a taxa contratual e indique se ela é mensal ou anual efetiva.</li>
+<li>Informe um número inteiro de parcelas e compare prestação, juros e total pago.</li>
+<li>Confronte o resultado com o CET e a planilha fornecidos pela instituição.</li>
+</ol>
+<h2>Como funciona o Sistema Price?</h2>
+<p>A prestação teórica é <strong>PMT = PV × i ÷ [1 − (1 + i)<sup>−n</sup>]</strong>. O valor da parcela fica aproximadamente constante: no começo há mais juros e menos amortização; ao longo do contrato, os juros caem e a amortização aumenta.</p>
+<h2>Exemplo verificado</h2>
+<p>Um financiamento de R$ 1.000,00 em 2 parcelas, à taxa de 1% ao mês, tem prestação Price de R$ 507,51. Com arredondamento em centavos, o total fica em R$ 1.015,02 e os juros, em R$ 15,02.</p>
+<p class="notice">Esta é uma simulação matemática do principal e dos juros. Para comparar propostas reais, consulte o CET, que pode alterar significativamente o custo.</p>
+<section class="faq" aria-labelledby="faq-titulo">
+<h2 id="faq-titulo">Dúvidas sobre financiamento</h2>
+<details>
+<summary>A prestação será igual à proposta do banco?</summary>
+<p>Não necessariamente. Diferenças podem surgir por seguros, tarifas, impostos, datas de vencimento, arredondamentos e outros itens do contrato.</p>
+</details>
+<details>
+<summary>Por que os juros diminuem na tabela?</summary>
+<p>Os juros de cada período incidem sobre o saldo devedor. Como o saldo é amortizado, a parcela de juros diminui ao longo do tempo.</p>
+</details>
+<details>
+<summary>Taxa anual dividida por 12 pode ser usada?</summary>
+<p>Não para uma taxa anual efetiva. A calculadora converte por equivalência composta, preservando o efeito anual informado.</p>
+</details>
+</section>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<a class="brand" href="/">Calcula<span>Negócio</span>
+</a>
+<p>Ferramentas gratuitas para decisões mais claras.</p>
+</div>
+<div>
+<h2>Relacionadas</h2>
+<ul>
+<li>
+<a href="/calculadoras/juros-compostos">Juros compostos</a>
+</li>
+<li>
+<a href="/calculadoras/rendimento-investimentos">Rendimento</a>
+</li>
+<li>
+<a href="/calculadoras/porcentagem">Porcentagem</a>
+</li>
+</ul>
+</div>
+<div>
+<h2>Informações</h2>
+<ul>
+<li>
+<a href="/sobre">Sobre</a>
+</li>
+<li>
+<a href="/privacidade">Privacidade</a>
+</li>
+<li>
+<a href="/termos">Termos</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="ano">
+</span> CalculaNegócio.</div>
+</div>
+</footer>
+</body>
+</html>
